@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="wholeCont">
+        <div class="home">
+            <p>What would you like to do?</p>
+            <div id="oneOnOne" class="option">One-One Message</div>
+            <div id="group" class="option">Group Message</div>
+        </div>
+       
+
+        <div id="forPopUp">
+            <div class="popUp">
+                <label for="roomId" id="label">Enter a userId</label>
+                <input type="text" name="roomId" placeholder="Enter here" id="roomInput">
+                <p id="errorMsg">.</p>
+                <div class="flex">
+                    <div class="btns redBg" id="cancel">Cancel</div>
+                    <div class="btns" id="chat">Chat</div>
+                </div>
+            </div>
+
+        </div>
+        <div id="privateMsg">
+            <div id="header">
+                <i class="fa-solid fa-arrow-left" id="backIcon"></i>
+                <div class="dp"></div>
+                <p id="userName">Hello</p>
+    
+            </div>
+            <div id="messages">
+                <!-- <div class="mesWithTime">
+                    <div class="myMessage">
+                        <p>hello you</p>
+                    </div>
+                    <p class="time">11:30</p>
+                </div> -->
+              
+            </div>
+            <div class="msgSenderDiv">
+                <!-- <img src="./images/avatars/image-juliusomo.png" class="personImg" alt=""> -->
+                <!-- <div class="dp"></div> -->
+                <textarea name="" class="textArea" placeholder="Message"></textarea>
+                <button id="send">Send</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../client.js"></script>
+</body>
+</html>
